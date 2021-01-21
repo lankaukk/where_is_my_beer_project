@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/where_is_my_beer.rb'
+
+# This is the executable file
+
+WhereIsMyBeer::CLI.new.start
