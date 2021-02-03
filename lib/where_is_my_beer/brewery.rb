@@ -11,6 +11,7 @@ class WhereIsMyBeer::Brewery
         @city = city
         @state = state
         self.save
+        # Brewery.all << self
     end
 
     def save 

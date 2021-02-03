@@ -23,10 +23,11 @@ class WhereIsMyBeer::CLI
     def display_local_breweries
         puts ""
         if @response != []
-            @response.each do |result|
+            sorted = @response.sort_by { |string| string["name"]  }
+            sorted.each do |result|
                 puts "#{result["name"]}".colorize(:magenta)
                 puts "#{result["street"]},".colorize(:blue) + " #{result["city"]},".colorize(:blue) + " #{result["state"]}".colorize(:blue)
-                puts "Call #{result["phone"].insert(3, '-').insert(-5, '-')} to check hours and availability.".colorize(:cyan)
+                puts "Call #{result["phone"].insert(3, '-').insert(-5, '-')if result["phone"]} to check hours and availability.".colorize(:cyan)
                 puts ""
             end
         else 
