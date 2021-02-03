@@ -31,11 +31,21 @@ class WhereIsMyBeer::CLI
             end
         else 
             puts "Sad.".colorize(:cyan)
-            puts "No where to drink there, try somewhere else.".colorize(:blue)
+            puts "No where to drink there.".colorize(:blue)
             puts ""
-            ask_zip
-            display_local_breweries
         end
+
+        puts "Would you like to check any other zip codes? (y/n)"
+                input = gets.strip.downcase
+                if input == "y" 
+                    ask_zip
+                    display_local_breweries
+                else 
+                    puts ""
+                    puts "Goodbye."
+                    puts ""
+                    # exit program
+                end
     end
 
 end
