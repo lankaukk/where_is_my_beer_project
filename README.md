@@ -2,6 +2,10 @@
 
 Welcome to the Where Is My Beer Gem! Here, you can search through an API of breweries in the US, find one in your zip code, and get their contact information. You'll have your beer in no time! 
 
+## Demo
+
+https://www.youtube.com/watch?v=k3TD3dLxqsg
+
 ## Installation
 
 Add this line to your application's Gemfile:
